@@ -13,14 +13,10 @@ import matplotlib.pyplot as plt
 def myGrid(start,stop,samples):
     if start == stop:
         return;
-    #Check the Step size
-    stepsize = abs(start-stop)/(float(samples) -1)
-    vals = np.arange(start,abs(stop-start) + stepsize,abs(start-stop)/(float(samples) -1));
-    
-    len_val = len(vals)
-    #horrible but fast hack
-    if vals[-1] > stop:
-        vals = vals[0:len_val-1];
+
+    vals = np.linspace(start,stop,sample);
+  
+
     
     len_val = len(vals)   
     n = samples*len_val;
